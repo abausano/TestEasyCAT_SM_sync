@@ -12,6 +12,9 @@
 //******************************************************************************************** 
 
 
+// revision 2 - moved  "DigitalOut Led(LED1)"
+
+
 //- EasyCAT shield application basic example 170912
 //- using SM syncronization for mbed boards 
 //
@@ -78,7 +81,7 @@ DigitalIn In_1(D5);              //
 DigitalIn In_2(D6);              // 
 DigitalIn In_3(D7);              //     
 
-DigitalOut Led(LED1);            //  
+  
 
 
 DigitalIn InterruptPin(D2);      // This pin receive the SM interrupt 
@@ -138,6 +141,8 @@ int main(void)
                                                         // The most common reason is that the SPI 
                                                         // chip select choosen on the board doesn't 
                                                         // match the one choosen by the firmware
+                                                           
+    DigitalOut Led(LED1);                               //                                                           
                                                                   
     while (1)                                           // stay in loop for ever
     {                                                   // with the led blinking
